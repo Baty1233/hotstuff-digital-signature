@@ -1,26 +1,13 @@
 {
-    "testbed": "hotstuff",
-    "key": {
-        "name": "zhuolun",
-        "path": "/Users/a54780/.ssh/aws"
-    },
+    "testbed": "local-hotstuff",
     "ports": {
         "consensus": 8000,
         "mempool": 7000,
         "front": 6000
     },
     "repo": {
-        "name": "hotstuff-digital-signature-benchmarking",
+        "name": "hotstuff",
         "url": "https://github.com/radiken/hotstuff-digital-signature-benchmarking.git",
         "branch": "main"
-    },
-    "instances": {
-        "type": "t3.medium",
-        "regions": [
-            "us-east-1",
-            "eu-central-1",
-            "ap-southeast-2",
-            "us-west-1"
-        ]
     }
 }

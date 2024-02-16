@@ -24,12 +24,14 @@ class LocalBench:
 
     def _background_run(self, command, log_file):
         name = splitext(basename(log_file))[0]
+        
         cmd = f'{command} 2> {log_file}'
         subprocess.run(['tmux', 'new', '-d', '-s', name, cmd], check=True)
 
     def _kill_nodes(self):
         try:
             cmd = CommandMaker.kill().split()
+            #print(f"Executing command: {cmd}")
             subprocess.run(cmd, stderr=subprocess.DEVNULL)
         except subprocess.SubprocessError as e:
             raise BenchError('Failed to kill testbed', e)

@@ -14,9 +14,9 @@ def local(ctx):
     bench_params = {
         'faults': 0,
         'nodes': 4,
-        'rate': 100_000,
+        'rate': 1_000,
         'tx_size': 512,
-        'duration': 30,
+        'duration': 20,
     }
     node_params = {
         'consensus': {
